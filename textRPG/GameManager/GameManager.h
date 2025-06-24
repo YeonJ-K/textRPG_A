@@ -5,6 +5,6 @@ class GameManager
 {
 public:
 	void effectItem(enum ItemNumber);
-	void battle(Character* player, std::unique_ptr<Monster> monster);//ƒ≥∏Ø≈Õ¥¬ ∞Ëº” ¿Ø¡ˆ, ∏ÛΩ∫≈Õ¥¬ ¿¸≈ı »ƒ º“∏Í
+	void battle(Character* player, std::unique_ptr<Monster> monster);//캐릭터는 계속 유지, 몬스터는 전투 후 소멸
 };
 
