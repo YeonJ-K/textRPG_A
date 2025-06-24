@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Monster">
+      <UniqueIdentifier>{526fd39c-1c43-4627-984d-1d0ca9534064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{4dd1f573-f933-4d62-ae85-7361f7a9d659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameManager">
+      <UniqueIdentifier>{141c3c3d-c206-4251-866a-ba5ecc1b707a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TextRPG.cpp" />
+    <ClCompile Include="GameManager\GameManager.cpp">
+      <Filter>GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Character\Character.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\BaseMonster.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\BossDecorator.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\GenerateMonster.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\MonsterDecorator.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\MonsterList.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Monster\Monster.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\MonsterDecorator.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\BossDecorator.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\BaseMonster.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\MonsterList.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\GenerateMonster.h">
+      <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\GameManager.h">
+      <Filter>GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Character\Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
