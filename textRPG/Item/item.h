@@ -1,82 +1,63 @@
- #ifndef ITEM_H
-#define ITEM_H
-
-#include <iostream>
-#include <memory>
+#pragma once
 #include <string>
 
-class Player;
+class Character;
 
 class Item {
 public:
-    std::string name;
-    int price;
-    virtual void use(Player& player) = 0;
-    virtual bool isConsumable() const = 0;
-    virtual bool isUnique() const { return false; }
-    virtual ~Item() {}
+	std::string name;
+	virtual void use(Character& character) = 0;
+	virtual bool isConsumable() const = 0;
+	virtual ~Item() = default;
 };
 
-class DropItem : public Item {
-    int healAmount;
-public:
-    DropItem(std::string _name, int _heal);
-    void use(Player& player) override;
-    bool isConsumable() const override;
-};
-
-// 상점 아이템들 선언
+// 소모품
 class item_airBag : public Item {
 public:
-    item_airBag();
-    void use(Player& player) override;
-    bool isConsumable() const override;
+	item_airBag() { name = "자동차 에어백"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return true; }
 };
 
 class item_ssangbong : public Item {
 public:
-    item_ssangbong();
-    void use(Player& player) override;
-    bool isConsumable() const override;
+	item_ssangbong() { name = "쌍절곤"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return true; }
 };
 
 class item_thornWhip : public Item {
 public:
-    item_thornWhip();
-    void use(Player& player) override;
-    bool isConsumable() const override;
+	item_thornWhip() { name = "가시채찍"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return true; }
 };
 
+// 영구 아이템
 class item_attackPotion : public Item {
 public:
-    item_attackPotion();
-    void use(Player& player) override;
-    bool isConsumable() const override;
+	item_attackPotion() { name = "근육증진물약"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return false; }
 };
 
 class item_healthPotion : public Item {
 public:
-    item_healthPotion();
-    void use(Player& player) override;
-    bool isConsumable() const override;
+	item_healthPotion() { name = "튼튼물약"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return false; }
 };
 
 class item_missDice : public Item {
 public:
-    item_missDice();
-    void use(Player& player) override;
-    bool isConsumable() const override;
-    bool isUnique() const override;
+	item_missDice() { name = "회피 주사위"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return false; }
 };
 
 class item_snacks : public Item {
 public:
-    item_snacks();
-    void use(Player& player) override;
-    bool isConsumable() const override;
-    bool isUnique() const override;
+	item_snacks() { name = "비상용 간식"; }
+	void use(Character& character) override;
+	bool isConsumable() const override { return false; }
 };
-
-std::shared_ptr<Item> getDropItem();
-
-#endif // ITEM_H
