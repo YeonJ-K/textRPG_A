@@ -20,12 +20,10 @@ void item_thornWhip::use(Character& character) {
 
 void item_attackPotion::use(Character& character) {
 	std::cout<<"공격력이 영구적으로 10 증가했습니다!\n";
-	// 캐릭터 공격력 직접 수정 필요 (접근자 제공 필요)
 }
 
 void item_healthPotion::use(Character& character) {
 	std::cout<<"최대 체력이 영구적으로 20 증가했습니다!\n";
-	// 캐릭터 체력 직접 수정 필요 (접근자 제공 필요)
 }
 
 void item_missDice::use(Character& character) {
